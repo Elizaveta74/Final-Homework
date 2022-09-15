@@ -17,9 +17,11 @@
 5. Инициализируем итоговый массив.
 6. Цикл по начальному массиву с проверкой длины каждого элемента.
 Заполняем итоговый массив.
-7. Создаем метод вывода массива на экран.
-8. Выводим начальный и итоговый массивы на экран.
+7. Выводим начальный и итоговый массивы на экран.
 */
+
+
+
 Console.Write("Введите размер массива: ");
 string enteredValue = Console.ReadLine();
 
@@ -49,4 +51,17 @@ for (int i = 0; i <= initialArraySize; i++)
         resultArraySize++;
     }
 }
+
+
+string[] resultArray = new string[resultArraySize];
+int resultArrayIndex = 0;
+for (int i = 0; i <= initialArraySize; i++)
+{
+    if (initialArray[i].Length <= maxAllowedElementLength)
+    {
+        resultArray[resultArrayIndex] = initialArray[i];
+        resultArrayIndex++;
+    }
+}
+
 
