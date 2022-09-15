@@ -1,0 +1,14 @@
+.DS_Store
+bin
+obj
+*.user
+/.vs
+*.designer.cs
+Resource.designer.cs
+/*.ncrunchsolution
+*.cache
+*.ncrunchproject
+/.idea
+local.settings.json
+.vscode
+nuget.config
