@@ -21,7 +21,7 @@
 8. Выводим начальный и итоговый массивы на экран.
 */
 Console.Write("Введите размер массива: ");
-string enteredValue = Console.ReadLine()!;
+string enteredValue = Console.ReadLine();
 
 bool initialArraySizeConvertedOk = int.TryParse(enteredValue, out int initialArraySize);
 if (!initialArraySizeConvertedOk)
@@ -36,4 +36,17 @@ if (initialArraySize <= 0)
     return; 
 }
 
+string[] initialArray = new string[initialArraySize];
+int resultArraySize = 0;
+const int maxAllowedElementLength = 3;
+
+for (int i = 0; i <= initialArraySize; i++)
+{
+    Console.Write($"Введите элемент массива[{i}]: ");
+    string elementValue = Console.ReadLine();
+    if (elementValue.Length <= maxAllowedElementLength)
+    {
+        resultArraySize++;
+    }
+}
 
