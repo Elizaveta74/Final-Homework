@@ -58,7 +58,7 @@ string[] resultArray = new string[resultArraySize];
 int resultArrayIndex = 0;
 for (int i = 0; i < initialArraySize; i++)
 {
-    if (initialArray[i].Length < maxAllowedElementLength)
+    if (initialArray[i].Length <= maxAllowedElementLength)
     {
         resultArray[resultArrayIndex] = initialArray[i];
         resultArrayIndex++;
