@@ -42,10 +42,11 @@ string[] initialArray = new string[initialArraySize];
 int resultArraySize = 0;
 const int maxAllowedElementLength = 3;
 
-for (int i = 0; i <= initialArraySize; i++)
+for (int i = 0; i < initialArraySize; i++)
 {
     Console.Write($"Введите элемент массива[{i}]: ");
     string elementValue = Console.ReadLine();
+    initialArray[i] = elementValue;
     if (elementValue.Length <= maxAllowedElementLength)
     {
         resultArraySize++;
@@ -55,13 +56,18 @@ for (int i = 0; i <= initialArraySize; i++)
 
 string[] resultArray = new string[resultArraySize];
 int resultArrayIndex = 0;
-for (int i = 0; i <= initialArraySize; i++)
+for (int i = 0; i < initialArraySize; i++)
 {
-    if (initialArray[i].Length <= maxAllowedElementLength)
+    if (initialArray[i].Length < maxAllowedElementLength)
     {
         resultArray[resultArrayIndex] = initialArray[i];
         resultArrayIndex++;
     }
 }
 
+string initialArrayAsString = string.Join(", ", initialArray);
+string resultArrayAsString = string.Join(", ", resultArray);
+
+string finalMessage = $"[{initialArrayAsString}] → [{resultArrayAsString}]";
+Console.WriteLine(finalMessage);
 
